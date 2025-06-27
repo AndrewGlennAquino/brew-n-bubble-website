@@ -24,8 +24,10 @@ body {
 
   --color-snow: rgba(249, 245, 245, 1);
   --color-rose: rgba(237, 175, 184, 1);
+  --color-tan: rgba(208, 177, 158, 1);
   --color-coffee: rgba(87, 61, 35, 1);
   --color-forest: rgba(26, 56, 50, 1);
+  --color-night: rgba(21, 21, 21, 1);
 }
 
 @layer base {
@@ -40,6 +42,10 @@ body {
   }
 
   .bar {
-    @apply bg-black w-full h-1.5 rounded-full;
+    @apply bg-rose w-full h-1.5 rounded-full;
+  }
+
+  .rounded-text-bg {
+    @apply bg-forest/75 w-fit p-4 rounded-full;
   }
 }
