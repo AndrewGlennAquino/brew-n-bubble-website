@@ -1,1 +1,45 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: Chewy;
+  src: url(./assets/fonts/Chewy.ttf);
+}
+
+@font-face {
+  font-family: Rubik;
+  src: url(./assets/fonts/Rubik.ttf);
+}
+
+body {
+  @apply bg-snow font-rubik;
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+@theme {
+  --font-chewy: Chewy;
+  --font-rubik: Rubik;
+
+  --color-snow: rgba(249, 245, 245, 1);
+  --color-rose: rgba(237, 175, 184, 1);
+  --color-coffee: rgba(87, 61, 35, 1);
+  --color-forest: rgba(26, 56, 50, 1);
+}
+
+@layer base {
+  h1 {
+    @apply font-chewy;
+  }
+}
+
+@layer components {
+  .mp-default {
+    @apply mx-auto p-4;
+  }
+
+  .bar {
+    @apply bg-black w-full h-1.5 rounded-full;
+  }
+}
