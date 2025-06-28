@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 
 const Home = () => {
   return (
-    <section id="hero" className="w-dvw h-dvh relative">
+    <section id="hero" className="w-screen h-screen relative">
       <Hero />
     </section>
   );
