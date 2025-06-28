@@ -28,9 +28,7 @@ const Header = () => {
         duration: 0.15,
       },
     },
-    animateHover: {
-      x: 10,
-    },
+    animateHover: { x: 10 },
   };
 
   // Animation variants for middle bar for hamburger menu
@@ -39,7 +37,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-forest/75 fixed z-10 top-0 left-0 right-0">
+    <nav className="bg-forest/85 fixed z-10 top-0 left-0 right-0">
       <div className="container mp-default flex justify-between items-center">
         {/* Logo */}
         <motion.h1
@@ -51,9 +49,10 @@ const Header = () => {
         </motion.h1>
 
         {/* Hamburger menu stack */}
-        <motion.nav
+        <motion.button
           id="hamburger-nav"
           className="w-12 h-12 flex flex-col justify-center items-center gap-2"
+          aria-label="hamburger-menu"
           onClick={handleClick}
           whileHover="animateHover"
         >
@@ -72,9 +71,9 @@ const Header = () => {
             animate={clicked ? "animateBottom" : null}
             variants={topBottomBarVariants}
           />
-        </motion.nav>
+        </motion.button>
       </div>
-    </header>
+    </nav>
   );
 };
 
