@@ -1,10 +1,24 @@
 import { useState } from "react";
-import { motion } from "motion/react";
+import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   // Set state if hamburger menu is clicked
   const [clicked, setClicked] = useState(false);
+
+  const [scrolled, setScrolled] = useState(false);
+
+  // Motion hook that tracks the absolute Y scroll position and returns a MotionValue object
+  const { scrollY } = useScroll();
+
+  /**
+   * Motion hook that extracts the value from the scrollY MotionValue object when it changes.
+   * Use the latest value to track if a user scrolls down from the top of the page, and change
+   * the header background if the user is at the very top of the page or scrolled past the top.
+   */
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    latest > 0 ? setScrolled(true) : setScrolled(false);
+  });
 
   // On click, store the inverse of the current state
   const handleClick = (e) => {
@@ -24,9 +38,7 @@ const Header = () => {
     animateBottom: {
       rotate: -45,
       y: "-0.875rem",
-      transition: {
-        duration: 0.15,
-      },
+      transition: { duration: 0.15 },
     },
     animateHover: { x: 10 },
   };
@@ -36,12 +48,24 @@ const Header = () => {
     animateMiddle: { opacity: 0 },
   };
 
+  const headerBackgroundVariants = {
+    initial: { backgroundColor: "rgba(255, 212, 202, 0.75)" },
+    animateBackground: { backgroundColor: "rgba(255, 212, 202, 1)", transition: { duration: 0.25 }}
+  };
+
   return (
-    <nav className="bg-forest/85 fixed z-10 top-0 left-0 right-0">
+    <motion.nav
+      className={"fixed z-10 top-0 left-0 right-0"}
+      initial="initial"
+      animate={scrolled ? "animateBackground" : null}
+      variants={headerBackgroundVariants}
+    >
       <div className="container mp-default flex justify-between items-center">
         {/* Logo */}
         <motion.h1
-          className="text-rose text-4xl"
+          className="text-coffee text-4xl"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1, transition: { duration: 0.25 } }}
           whileHover={{ scale: 1.15 }}
           whileTap={{ scale: 1.15 }}
         >
@@ -73,7 +97,7 @@ const Header = () => {
           />
         </motion.button>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
