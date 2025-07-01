@@ -15,19 +15,18 @@ body {
 }
 
 #root {
-  @apply min-h-screen;
+  @apply max-w-screen min-h-screen;
 }
 
 @theme {
   --font-chewy: Chewy;
   --font-rubik: Rubik;
 
-  --color-snow: rgba(249, 245, 245, 1);
-  --color-rose: rgba(237, 175, 184, 1);
-  --color-tan: rgba(208, 177, 158, 1);
-  --color-coffee: rgba(87, 61, 35, 1);
-  --color-forest: rgba(26, 56, 50, 1);
-  --color-night: rgba(21, 21, 21, 1);
+  --color-snow: #f9f5f5;
+  --color-tan: #ffd4ca;
+  --color-coffee: #573d23;
+  --color-forest: #305F3C;
+  --color-night: #151515;
 }
 
 @layer base {
@@ -42,10 +41,10 @@ body {
   }
 
   .bar {
-    @apply bg-rose w-full h-1.5 rounded-full;
+    @apply bg-coffee w-full h-1.5 rounded-full;
   }
 
   .rounded-text-bg {
-    @apply bg-forest/85 w-fit p-2.5 rounded-full;
+    @apply bg-tan/75 w-fit p-2.5 lg:p-4 rounded-full;
   }
 }
