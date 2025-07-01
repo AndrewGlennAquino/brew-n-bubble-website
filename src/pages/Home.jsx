@@ -5,6 +5,7 @@ const Home = () => {
   return (
     <section id="hero" className="w-screen h-screen relative">
       <Hero />
+      <div className="overflow-x-hidden h-screen"/>
     </section>
   );
 };
