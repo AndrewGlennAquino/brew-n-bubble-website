@@ -10,6 +10,11 @@
   src: url(./assets/fonts/Rubik.ttf);
 }
 
+@font-face {
+  font-family: Pacifico;
+  src: url(./assets/fonts/Pacifico.ttf);
+}
+
 body {
   @apply bg-snow font-rubik;
 }
@@ -21,9 +26,11 @@ body {
 @theme {
   --font-chewy: Chewy;
   --font-rubik: Rubik;
+  --font-pacifico: Pacifico;
 
   --color-snow: #f9f5f5;
-  --color-tan: #ffd4ca;
+  --color-butter: #FFFF85;
+  --color-tan: #D1B189;
   --color-coffee: #573d23;
   --color-forest: #305F3C;
   --color-night: #151515;
@@ -41,10 +48,14 @@ body {
   }
 
   .bar {
-    @apply bg-coffee w-full h-1.5 rounded-full;
+    @apply bg-butter w-full h-1.5 rounded-full;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 15px var(--color-butter);
   }
 
   .rounded-text-bg {
-    @apply bg-tan/75 w-fit p-2.5 lg:p-4 rounded-full;
+    @apply bg-night/75 w-fit p-2.5 lg:p-4 rounded-full;
   }
 }
