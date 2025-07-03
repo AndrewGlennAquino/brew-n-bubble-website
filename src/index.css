@@ -16,7 +16,7 @@
 }
 
 body {
-  @apply bg-snow font-rubik;
+  @apply bg-night font-rubik;
 }
 
 #root {
@@ -52,7 +52,7 @@ body {
   }
 
   .text-glow {
-    text-shadow: 0 0 15px var(--color-butter);
+    text-shadow: 0 0 10px var(--color-butter);
   }
 
   .rounded-text-bg {
