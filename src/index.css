@@ -38,7 +38,7 @@ body {
 
 @layer base {
   h1 {
-    @apply font-chewy;
+    @apply font-chewy text-3xl xl:text-4xl;
   }
 }
 
