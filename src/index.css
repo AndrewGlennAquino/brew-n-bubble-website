@@ -16,7 +16,7 @@
 }
 
 body {
-  @apply bg-night font-rubik;
+  @apply bg-snow font-rubik;
 }
 
 #root {
