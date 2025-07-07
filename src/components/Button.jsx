@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
 
 /**
  * Fully customizeable button component that takes

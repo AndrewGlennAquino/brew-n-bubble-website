@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import ScrolledContext from "../contexts/ScrolledContext";
-import { motion } from "motion/react";
+import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
 import Button from "./Button";
 
 /**

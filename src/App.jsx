@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { motion, useScroll, useMotionValueEvent } from "motion/react";
+import { useScroll, useMotionValueEvent } from "motion/react";
 import ScrolledContext from "./contexts/ScrolledContext.jsx";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
@@ -39,7 +39,7 @@ const App = () => {
         <Header />
         <main>
           <Hero />
-          <section className="h-screen" aria-label="Temp" />
+          <section className="bg-snow h-screen" aria-label="Temp" />
         </main>
       </ScrolledContext.Provider>
     </>
