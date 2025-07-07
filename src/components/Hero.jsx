@@ -9,17 +9,18 @@ const Hero = () => {
   // Animation variants for the text container
   const textContainerVariants = {
     animateFadeIn: {
-      transition: { delayChildren: 0.25, staggerChildren: 0.15 },
+      transition: { delayChildren: 0.25, staggerChildren: 0.25 },
     },
   };
 
   // Animation variants for the text
   const textVariants = {
-    initial: { scale: 0 },
+    initial: { y: 25, opacity: 0 },
     animateFadeIn: {
-      scale: 1,
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.25,
+        duration: 0.5,
         ease: "easeOut",
       },
     },
@@ -38,19 +39,19 @@ const Hero = () => {
         loop
       />
 
-      {/* Transparent background filter that brightens video */}
-      <div className="bg-snow/15 w-screen h-screen absolute inset-0 -z-10" />
+      {/* Transparent background filter */}
+      <div className="bg-coffee/50 w-screen h-screen absolute inset-0 -z-10" />
 
       {/* Text and button container */}
       <motion.div
-        className="text-butter w-full h-full flex flex-col justify-center gap-4"
+        className="text-butter w-full h-full flex flex-col justify-center gap-8"
         initial="initial"
         animate="animateFadeIn"
         variants={textContainerVariants}
       >
         {/* Hero subtext */}
         <motion.p
-          className="rounded-text-bg text-lg xl:text-xl font-bold"
+          className="text-xl xl:text-2xl font-bold"
           variants={textVariants}
         >
           Welcome to
@@ -58,7 +59,7 @@ const Hero = () => {
 
         {/* Hero header */}
         <motion.h1
-          className="rounded-text-bg font-pacifico text-glow text-5xl xl:text-6xl"
+          className="font-pacifico text-glow text-5xl xl:text-6xl"
           variants={textVariants}
         >
           Brew 'n Bubble

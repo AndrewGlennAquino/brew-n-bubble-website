@@ -13,12 +13,12 @@ const Header = () => {
   // Animation variants that changes the background color on scroll
   const headerBackgroundVariants = {
     initial: {
-      backgroundColor: "rgba(21, 21, 21, 0.75)",
+      backgroundColor: "rgba(249, 245, 245, 0)",
       color: "rgb(255, 255, 133)",
     },
     animateBackground: {
       backgroundColor: "rgba(249, 245, 245, 1)",
-      transition: { duration: 0.25 },
+      transition: { duration: 0.5 },
     },
     animateText: { color: "rgb(48, 95, 60)" },
   };
@@ -26,10 +26,12 @@ const Header = () => {
   // Animation variants that changes the button style on scroll
   const buttonVariants = {
     initial: {
-      backgroundColor: "rgb(255, 255, 133)",
-      color: "rgb(21, 21, 21)",
+      display: "none",
+      opacity: 0
     },
     animateButton: {
+      display: "block",
+      opacity: 1,
       backgroundColor: "rgba(48, 95, 60)",
       color: "rgb(249, 245, 245)",
     },
@@ -38,7 +40,7 @@ const Header = () => {
   return (
     // If the user scrolls below the hero, change header style
     <motion.header
-      className={"shadow fixed z-10 top-0 left-0 right-0"}
+      className={`${scrolled ? 'shadow' : null} fixed z-10 top-0 left-0 right-0`}
       initial="initial"
       animate={scrolled ? ["animateBackground", "animateText"] : null}
       variants={headerBackgroundVariants}
@@ -48,15 +50,15 @@ const Header = () => {
         {/* Logo */}
         <motion.h1
           className="text-3xl xl:text-4xl"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1, transition: { duration: 0.25 } }}
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
         >
           Brew 'n Bubble
         </motion.h1>
 
         {/* Order now button */}
         <Button
-          style=""
+          style={`text-[rgb(249, 245, 245)]`}
           url="https://direct.chownow.com/order/34791/locations/52608"
           text="Order Now"
           ariaLabel="Order now button"
