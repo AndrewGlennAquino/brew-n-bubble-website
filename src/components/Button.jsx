@@ -19,7 +19,7 @@ const Button = ({
     <motion.a
       href={url}
       target="_blank"
-      className={`rounded-text-bg text-lg xl:text-xl font-bold ${style}`}
+      className={`rounded-text-bg text-lg font-bold ${style}`}
       aria-label={ariaLabel}
       initial={initial}
       animate={animate}
