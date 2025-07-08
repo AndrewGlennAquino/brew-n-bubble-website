@@ -3,20 +3,21 @@ import { useScroll, useMotionValueEvent } from "motion/react";
 import ScrolledContext from "./contexts/ScrolledContext.jsx";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
+import About from "./components/About.jsx";
 
 /**
  *  App component that contains all application content
  */
 const App = () => {
-  // Hold state if user scrolled below scrollbar origin
-  const [scrolled, setScrolled] = useState(false);
-
   // Hold state of the current window height
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight - 1);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight / 2);
+
+  // Hold state if user scrolled below scrollbar origin
+  const [scrolled, setScrolled] = useState(false);  
 
   // On screen resize, set windowHeight state to new height then clean up
   useEffect(() => {
-    const handleResize = () => setWindowHeight(window.innerHeight - 1);
+    const handleResize = () => setWindowHeight(window.innerHeight / 2);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -39,7 +40,7 @@ const App = () => {
         <Header />
         <main>
           <Hero />
-          <section className="bg-snow h-screen" aria-label="Temp" />
+          <About />
         </main>
       </ScrolledContext.Provider>
     </>
