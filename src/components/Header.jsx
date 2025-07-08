@@ -49,7 +49,6 @@ const Header = () => {
       <div className="container mp-default flex justify-between items-center">
         {/* Logo */}
         <motion.h1
-          className="text-3xl xl:text-4xl"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
         >
