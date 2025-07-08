@@ -16,7 +16,10 @@
 }
 
 body {
-  @apply bg-snow font-rubik;
+  /* Background texture from heropatterns.com */
+  background-color: #f9f5f5;
+  background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23305f3c' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  @apply font-rubik;
 }
 
 #root {
@@ -29,10 +32,10 @@ body {
   --font-pacifico: Pacifico;
 
   --color-snow: #f9f5f5;
-  --color-butter: #FFFF85;
-  --color-tan: #D1B189;
+  --color-butter: #ffff85;
+  --color-tan: #d1b189;
   --color-coffee: #573d23;
-  --color-forest: #305F3C;
+  --color-forest: #305f3c;
   --color-night: #151515;
 }
 
