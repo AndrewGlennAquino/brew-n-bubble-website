@@ -2,27 +2,29 @@ import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
 
 /**
  * Fully customizeable button component that takes
- * style, url, text, ariaLabel, and Motion props as props.
+ * className, url, text, ariaLabel, and Motion props as props.
  *
- * @param {*} props style, url, text, ariaLabel, initial, animate, variants
+ * @param {*} props className, url, text, ariaLabel, initial, animate, whileInView, variants
  */
 const Button = ({
-  style,
+  className,
   url,
   text,
   ariaLabel,
   initial,
   animate,
+  whileInView,
   variants,
 }) => {
   return (
     <motion.a
       href={url}
       target="_blank"
-      className={`rounded-text-bg text-lg font-bold ${style}`}
+      className={`rounded-text-bg text-lg font-bold ${className}`}
       aria-label={ariaLabel}
       initial={initial}
       animate={animate}
+      whileInView={whileInView}
       whileHover={{ scale: 1.15 }}
       whileTap={{ scale: 1.15 }}
       variants={variants}
