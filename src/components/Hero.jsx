@@ -20,7 +20,7 @@ const Hero = () => {
       />
 
       {/* Transparent background filter */}
-      <div className="bg-coffee/50 w-screen h-screen absolute inset-0 -z-10" />
+      <div className="bg-coffee/50 h-screen absolute inset-0 -z-10" />
 
       {/* Text container */}
       <div className="text-butter w-full h-full flex flex-col justify-center gap-8">
