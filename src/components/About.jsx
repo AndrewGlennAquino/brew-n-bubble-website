@@ -11,8 +11,12 @@ const About = () => {
       className="h-screen md:h-[55vh] mp-default flex justify-center items-center relative"
       aria-label="About"
     >
+      {/* Animated line svg */}
+      <div className="md:hidden bg-[url(./assets/svgs/wave-haikei.svg)] bg-cover bg-center bg-no-repeat h-full absolute inset-0 -z-10" />
+      <div className="hidden md:block bg-[url(./assets/svgs/wave-haikei-lg.svg)] bg-cover bg-center bg-no-repeat h-full absolute inset-0 -z-10" />
+
       {/* Animated container */}
-      <FadeIn className=" container h-fit flex flex-col sm:flex-row justify-center items-center gap-8">
+      <FadeIn className="container h-fit flex flex-col sm:flex-row justify-center items-center gap-8">
         {/* About header */}
         <div className="bg-snow/25 w-fit p-2 flex flex-col flex-grow-0 basis-full gap-8 rounded-2xl">
           <h1>About us</h1>
