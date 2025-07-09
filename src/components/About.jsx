@@ -11,9 +11,8 @@ const About = () => {
       className="h-screen md:h-[55vh] mp-default flex justify-center items-center relative"
       aria-label="About"
     >
-      {/* Animated line svg */}
-      <div className="md:hidden bg-[url(./assets/svgs/wave-haikei.svg)] bg-cover bg-center bg-no-repeat h-full absolute inset-0 -z-10" />
-      <div className="hidden md:block bg-[url(./assets/svgs/wave-haikei-lg.svg)] bg-cover bg-center bg-no-repeat h-full absolute inset-0 -z-10" />
+      {/* Background line svg */}
+      <div className="hidden md:block bg-[url(./assets/svgs/wave-haikei-right.svg)] bg-cover bg-center bg-no-repeat h-full absolute inset-0 -z-10" />
 
       {/* Animated container */}
       <FadeIn className="container h-fit flex flex-col sm:flex-row justify-center items-center gap-8">
