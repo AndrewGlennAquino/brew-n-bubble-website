@@ -1,10 +1,10 @@
 import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
 
 /**
- * FadeIn component that animates the fade in for all children
- * @param {*} props className, children
+ * FadeIn component that animates or animates while in view the fade in for all children
+ * @param {*} props className, animate, children
  */
-const FadeIn = ({ className, children }) => {
+const FadeIn = ({ className, animate = false, children }) => {
   // Animation variants for the parent container that staggers children
   const parentVariants = {
     animateFadeIn: {
@@ -30,7 +30,8 @@ const FadeIn = ({ className, children }) => {
     <motion.div
       className={className}
       initial="initial"
-      whileInView="animateFadeIn"
+      animate={animate ? "animateFadeIn" : null}
+      whileInView={animate ? null : "animateFadeIn"}
       variants={parentVariants}
     >
       {/* Encapsulate each child in a div that animates fade in */}
