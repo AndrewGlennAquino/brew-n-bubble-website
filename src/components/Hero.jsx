@@ -24,7 +24,10 @@ const Hero = () => {
 
       {/* Text container */}
       <div className="text-butter w-full h-full flex flex-col justify-center gap-8">
-        <FadeIn className="flex flex-col justify-center gap-8">
+        <FadeIn 
+          className="flex flex-col justify-center gap-8"
+          animate={true}
+        >
           {/* Hero subtext */}
           <p className="text-xl xl:text-2xl font-bold leading-none">
             Welcome to
@@ -43,7 +46,7 @@ const Hero = () => {
           text="View Our Menu"
           aria-label="View our menu button"
           initial={{ y: 25, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5, delay: 0.75 } }}
+          animate={{ y: 0, opacity: 1, transition: { duration: 0.5, delay: 0.75 } }}
         />
       </div>
     </section>
