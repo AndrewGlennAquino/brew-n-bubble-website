@@ -29,7 +29,7 @@ const Hero = () => {
           animate={true}
         >
           {/* Hero subtext */}
-          <p className="text-xl xl:text-2xl font-bold leading-none">
+          <p className="font-pacifico text-2xl xl:text-3xl font-bold leading-none">
             Welcome to
           </p>
 
