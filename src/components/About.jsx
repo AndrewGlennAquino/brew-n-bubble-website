@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import Vine from "./Vine";
 import FadeIn from "./FadeIn";
 import tempAboutImage from "../assets/images/temp-about-image.jpg";
 
@@ -11,8 +12,8 @@ const About = () => {
       className="h-screen md:h-[55vh] mp-default flex justify-center items-center relative"
       aria-label="About"
     >
-      {/* Background line svg */}
-      <div className="hidden md:block bg-[url(./assets/svgs/wave-haikei-right.svg)] bg-cover bg-center bg-no-repeat h-full absolute inset-0 -z-10" />
+      {/* Background vine svg */}
+      <Vine />
 
       {/* Animated container */}
       <FadeIn className="container h-fit flex flex-col sm:flex-row justify-center items-center gap-8">
