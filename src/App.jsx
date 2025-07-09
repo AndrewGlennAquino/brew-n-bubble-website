@@ -4,6 +4,8 @@ import ScrolledContext from "./contexts/ScrolledContext.jsx";
 import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
+import Sourcing from "./components/Sourcing.jsx";
+import Location from "./components/Location.jsx";
 
 /**
  *  App component that contains all application content
@@ -41,6 +43,8 @@ const App = () => {
         <main>
           <Hero />
           <About />
+          <Sourcing />
+          <Location />
         </main>
       </ScrolledContext.Provider>
     </>
