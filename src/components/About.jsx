@@ -1,5 +1,3 @@
-import { motion } from "motion/react";
-import Vine from "./Vine";
 import FadeIn from "./FadeIn";
 import tempAboutImage from "../assets/images/temp-about-image.jpg";
 
@@ -12,9 +10,6 @@ const About = () => {
       className="h-screen md:h-[55vh] mp-default flex justify-center items-center relative"
       aria-label="About"
     >
-      {/* Background vine svg */}
-      <Vine />
-
       {/* Animated container */}
       <FadeIn className="container h-fit flex flex-col sm:flex-row justify-center items-center gap-8">
         {/* About header */}
