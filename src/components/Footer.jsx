@@ -13,9 +13,9 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-forest">
+    <footer className="bg-forest mp-default">
       {/* Footer container */}
-      <div className="container mp-default w-full flex justify-between items-center">
+      <div className="container mx-auto w-full flex justify-between items-center">
         {/* Footer header */}
         <h1 className="text-snow">Contact Us!</h1>
 
@@ -74,7 +74,7 @@ const Footer = () => {
       </div>
 
       {/* Phone and email for mobile devices */}
-      <div className="mp-default flex sm:hidden justify-center gap-4">
+      <div className="pt-2 flex sm:hidden justify-center gap-4">
         <a href="mailto:info@brewnbubble.com" className="footer-contact-info">
           info@brewnbubble.com
         </a>
