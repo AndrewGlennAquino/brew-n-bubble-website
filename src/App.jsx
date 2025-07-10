@@ -6,6 +6,7 @@ import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Sourcing from "./components/Sourcing.jsx";
 import Location from "./components/Location.jsx";
+import Footer from "./components/Footer.jsx";
 
 /**
  *  App component that contains all application content
@@ -15,7 +16,7 @@ const App = () => {
   const [windowHeight, setWindowHeight] = useState(window.innerHeight / 2);
 
   // Hold state if user scrolled below scrollbar origin
-  const [scrolled, setScrolled] = useState(false);  
+  const [scrolled, setScrolled] = useState(false);
 
   // On screen resize, set windowHeight state to new height then clean up
   useEffect(() => {
@@ -46,6 +47,7 @@ const App = () => {
           <Sourcing />
           <Location />
         </main>
+        <Footer />
       </ScrolledContext.Provider>
     </>
   );
