@@ -47,6 +47,10 @@ body {
   p {
     @apply text-sm xl:text-base;
   }
+
+  a {
+    @apply text-sm xl:text-base;
+  }
 }
 
 @layer components {
@@ -64,5 +68,13 @@ body {
 
   .rounded-text-bg {
     @apply w-fit p-2 rounded-full;
+  }
+
+  .social-media-link {
+    @apply w-10 h-10;
+  }
+
+  .footer-contact-info {
+    @apply text-snow underline;
   }
 }
