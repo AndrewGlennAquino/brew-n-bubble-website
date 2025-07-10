@@ -7,7 +7,7 @@ import tempSourcingImage from "../assets/images/temp-sourcing-image.png";
 const Sourcing = () => {
   return (
     <section
-      className="h-screen md:h-[55vh] mp-default flex justify-center items-center relative"
+      className="h-screen md:h-[65vh] mp-default flex justify-center items-center relative"
       aria-label="Sourcing"
     >
       {/* Animated container */}

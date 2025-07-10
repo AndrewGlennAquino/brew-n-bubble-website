@@ -51,7 +51,7 @@ const Location = () => {
 
         {/* Google Maps embed API */}
         <motion.div 
-          className="w-full h-[55vh]"
+          className="w-full h-[65vh]"
           variants={childrenVariants}
         >
           <iframe

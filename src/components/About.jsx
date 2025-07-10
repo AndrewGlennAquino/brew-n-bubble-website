@@ -7,7 +7,7 @@ import tempAboutImage from "../assets/images/temp-about-image.jpg";
 const About = () => {
   return (
     <section
-      className="h-screen md:h-[55vh] mp-default flex justify-center items-center relative"
+      className="h-screen md:h-[65vh] mp-default flex justify-center items-center relative"
       aria-label="About"
     >
       {/* Animated container */}
