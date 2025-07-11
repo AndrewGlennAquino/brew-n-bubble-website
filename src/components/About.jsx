@@ -26,9 +26,9 @@ const About = () => {
       aria-label="About"
     >
       {/* Animated container */}
-      <FadeIn className="container flex flex-col sm:flex-row justify-center items-center gap-8">
+      <div className="container flex flex-col sm:flex-row justify-center items-center gap-8">
         {/* About header */}
-        <div className="bg-snow/25 flex flex-col gap-8 rounded-2xl">
+        <div className="bg-snow/25 w-full h-full flex flex-col gap-8 rounded-2xl">
           <h1>About us</h1>
 
           {/* About text */}
@@ -44,46 +44,50 @@ const About = () => {
         </div>
 
         {/* About image ticker container*/}
-        <div className="flex overflow-x-hidden rounded-2xl">
+        <div className="w-full flex overflow-x-hidden rounded-2xl">
           {/* Animated ticker images */}
           <motion.div
-            className="flex flex-shrink-0"
+            className="image-ticker"
             initial="initial"
             animate="animateTicker"
             variants={tickerVariants}
           >
             {images.map((image, index) => {
               return (
-                <img
-                  key={`${image}-${index}`}
-                  src={image}
-                  alt={`${image}`}
-                  className="image-ticker-item"
-                />
+                <div className="image-ticker-item">
+                  <img
+                    key={`${image}-${index}`}
+                    src={image}
+                    alt={`${image}`}
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
               );
             })}
           </motion.div>
 
           {/* Animated ticker images */}
           <motion.div
-            className="flex flex-shrink-0"
+            className="image-ticker"
             initial="initial"
             animate="animateTicker"
             variants={tickerVariants}
           >
             {images.map((image, index) => {
               return (
-                <img
-                  key={`${image}-${index}`}
-                  src={image}
-                  alt={`${image}`}
-                  className="image-ticker-item"
-                />
+                <div className="image-ticker-item">
+                  <img
+                    key={`${image}-${index}`}
+                    src={image}
+                    alt={`${image}`}
+                    className="w-full h-auto object-cover rounded-2xl"
+                  />
+                </div>
               );
             })}
           </motion.div>
         </div>
-      </FadeIn>
+      </div>
     </section>
   );
 };
