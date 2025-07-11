@@ -46,7 +46,7 @@ const Header = () => {
       variants={headerBackgroundVariants}
     >
       {/* Content container */}
-      <div className="container mp-default flex justify-between items-center">
+      <div className="container mp-default my-0 flex justify-between items-center">
         {/* Logo */}
         <motion.h1
           initial={{ opacity: 0, scale: 0 }}

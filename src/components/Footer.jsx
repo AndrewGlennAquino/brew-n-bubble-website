@@ -13,7 +13,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-forest mp-default">
+    <footer className="bg-forest mp-default my-0">
       {/* Footer container */}
       <div className="container mx-auto w-full flex justify-between items-center">
         {/* Footer header */}
