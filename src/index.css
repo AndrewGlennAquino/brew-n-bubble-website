@@ -70,6 +70,10 @@ body {
     @apply w-fit p-2 rounded-full;
   }
 
+  .image-ticker-item {
+    @apply w-full h-48 lg:h-64 mr-4 object-cover rounded-2xl;
+  }
+
   .social-media-link {
     @apply w-10 h-10;
   }
