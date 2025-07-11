@@ -34,7 +34,7 @@ const Sourcing = () => {
       {/* Animated container */}
       <FadeIn className="container flex flex-col-reverse sm:flex-row-reverse justify-center items-center gap-8">
         {/* Sourcing header */}
-        <div className="text-snow flex flex-col gap-8">
+        <div className="text-snow sm:pr-8 flex flex-col gap-8">
           <h1>Sourcing</h1>
 
           {/* Sourcing text */}
@@ -50,11 +50,13 @@ const Sourcing = () => {
         </div>
 
         {/* Sourcing image */}
-        <img
-          src={caribouImage}
-          alt="Caribou logo"
-          className="w-full h-64 sm:h-full sm:pl-8 object-cover"
-        />
+        <div className="w-64 h-auto sm:pl-8">
+          <img
+            src={caribouImage}
+            alt="Caribou logo"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </FadeIn>
     </section>
   );
