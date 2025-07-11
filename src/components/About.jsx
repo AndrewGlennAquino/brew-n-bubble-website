@@ -1,19 +1,34 @@
+import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
 import FadeIn from "./FadeIn";
-import tempAboutImage from "../assets/images/temp-about-image.jpg";
+import tempAboutImage1 from "../assets/images/temp-about-image-1.jpg";
+import tempAboutImage2 from "../assets/images/temp-about-image-2.jpg";
+import tempAboutImage3 from "../assets/images/temp-about-image-3.jpg";
 
 /**
  * About component with animated header, text, and image
  */
 const About = () => {
+  // Images for image ticker
+  const images = [tempAboutImage1, tempAboutImage2, tempAboutImage3];
+
+  // Animation variants for image ticker
+  const tickerVariants = {
+    initial: { x: 0 },
+    animateTicker: {
+      x: "-100%",
+      transition: { duration: 30, repeat: Infinity, ease: "linear" },
+    },
+  };
+
   return (
     <section
-      className="h-screen md:h-[65vh] mp-default flex justify-center items-center relative"
+      className="h-fit mp-default flex justify-center items-center relative"
       aria-label="About"
     >
       {/* Animated container */}
       <FadeIn className="container h-fit flex flex-col sm:flex-row justify-center items-center gap-8">
         {/* About header */}
-        <div className="bg-snow/25 w-fit p-2 flex flex-col flex-grow-0 basis-full gap-8 rounded-2xl">
+        <div className="bg-snow/25 w-fit flex flex-col flex-grow-0 basis-full gap-8 rounded-2xl">
           <h1>About us</h1>
 
           {/* About text */}
@@ -28,13 +43,45 @@ const About = () => {
           </p>
         </div>
 
-        {/* About image */}
-        <div className="w-fit sm:w-[40vw] 2xl:w-[30vw] h-fit sm:h-[40vh] 2xl:h-[30vh]">
-          <img
-            src={tempAboutImage}
-            alt="Temporary about image"
-            className="w-full h-full object-cover rounded-2xl"
-          />
+        {/* About image ticker container*/}
+        <div className="flex overflow-x-hidden">
+          {/* Animated ticker images */}
+          <motion.div
+            className="flex flex-shrink-0"
+            initial="initial"
+            animate="animateTicker"
+            variants={tickerVariants}
+          >
+            {images.map((image, index) => {
+              return (
+                <img
+                  key={`${image}-${index}`}
+                  src={image}
+                  alt={`${image}`}
+                  className="image-ticker-item"
+                />
+              );
+            })}
+          </motion.div>
+
+          {/* Animated ticker images */}
+          <motion.div
+            className="flex flex-shrink-0"
+            initial="initial"
+            animate="animateTicker"
+            variants={tickerVariants}
+          >
+            {images.map((image, index) => {
+              return (
+                <img
+                  key={`${image}-${index}`}
+                  src={image}
+                  alt={`${image}`}
+                  className="image-ticker-item"
+                />
+              );
+            })}
+          </motion.div>
         </div>
       </FadeIn>
     </section>
