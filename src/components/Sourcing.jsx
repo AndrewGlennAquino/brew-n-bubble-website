@@ -25,17 +25,6 @@ const Sourcing = () => {
     },
   };
 
-  // Animation variants that changes the background color when in view
-  const sectionBackgroundVariants = {
-    initial: {
-      backgroundColor: "rgba(249, 245, 245, 0)",
-    },
-    animateBackground: {
-      backgroundColor: "rgba(122, 176, 189, 1)",
-      transition: { duration: 1 },
-    },
-  };
-
   return (
     <section
       className="mp-default flex justify-center items-center relative"
@@ -46,15 +35,13 @@ const Sourcing = () => {
         className="container flex flex-col sm:flex-row justify-center items-center relative"
         initial="initial"
         whileInView="animateFadeIn"
+        viewport={{ amount: 0.5, once: true }}
         variants={parentVariants}
       >
         {/* Content Background */}
         <motion.div
-          className="container absolute top-0 bottom-0 -z-10 rounded-4xl"
-          initial="initial"
-          whileInView="animateBackground"
-          viewport={{ amount: 0.5, once: true }}
-          variants={sectionBackgroundVariants}
+          className="container bg-caribou absolute top-0 bottom-0 -z-10 rounded-4xl"
+          variants={childrenVariants}
         />
 
         {/* Sourcing image */}
