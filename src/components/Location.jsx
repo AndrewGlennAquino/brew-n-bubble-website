@@ -37,7 +37,7 @@ const Location = () => {
         className="container w-full h-full flex flex-col jusity-center"
         initial="initial"
         whileInView="animateFadeIn"
-        viewport={{ amount: 0.5 }}
+        viewport={{ amount: 0.5, once: true }}
         variants={parentVariants}
       >
         {/* Location header */}
@@ -55,7 +55,7 @@ const Location = () => {
           variants={childrenVariants}
         >
           <iframe
-            className="w-full h-full"
+            className="w-full h-full rounded-4xl"
             loading="lazy"
             allowFullScreen
             src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJh3GibEwbD4gRKCCmpnJvNGI&key=${mapsPublicKey}`}
