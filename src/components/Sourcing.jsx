@@ -59,7 +59,7 @@ const Sourcing = () => {
         variants={parentVariants}
       >
         {/* Sourcing image */}
-        <motion.div className="w-64 h-auto sm:pl-8" variants={childrenVariants}>
+        <motion.div className="w-64 h-auto sm:pl-8 flex-shrink-0" variants={childrenVariants}>
           <img
             src={caribouImage}
             alt="Caribou logo"
