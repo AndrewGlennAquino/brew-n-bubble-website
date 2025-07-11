@@ -34,7 +34,7 @@ const Location = () => {
     >
       {/* Animated container */}
       <motion.div 
-        className="container w-full h-full flex flex-col jusity-center"
+        className="container w-full h-full mx-4 sm:mx-0 flex flex-col jusity-center"
         initial="initial"
         whileInView="animateFadeIn"
         viewport={{ amount: 0.5, once: true }}
@@ -51,7 +51,7 @@ const Location = () => {
 
         {/* Google Maps embed API */}
         <motion.div 
-          className="w-full h-[65vh]"
+          className="container h-[65vh]"
           variants={childrenVariants}
         >
           <iframe

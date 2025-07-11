@@ -60,7 +60,7 @@ const Sourcing = () => {
 
         {/* Sourcing image */}
         <motion.div
-          className="w-64 h-auto m-4 flex-shrink-0"
+          className="w-64 h-auto m-4 sm:p-8 flex-shrink-0"
           variants={childrenVariants}
         >
           <img
@@ -72,7 +72,7 @@ const Sourcing = () => {
 
         {/* Sourcing header */}
         <motion.div
-          className="text-snow m-4 flex flex-col gap-8"
+          className="text-snow m-4 sm:p-8 flex flex-col gap-8"
           variants={childrenVariants}
         >
           <h1>Sourcing</h1>
