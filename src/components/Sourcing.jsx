@@ -19,7 +19,7 @@ const Sourcing = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 1,
         ease: "easeOut",
       },
     },
@@ -46,7 +46,6 @@ const Sourcing = () => {
         className="container flex flex-col sm:flex-row justify-center items-center relative"
         initial="initial"
         whileInView="animateFadeIn"
-        viewport={{ amount: 0.5, once: true }}
         variants={parentVariants}
       >
         {/* Content Background */}

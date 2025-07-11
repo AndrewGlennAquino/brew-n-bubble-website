@@ -24,7 +24,7 @@ const About = () => {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 1,
         ease: "easeOut",
       },
     },
