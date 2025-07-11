@@ -44,7 +44,7 @@ const About = () => {
         </div>
 
         {/* About image ticker container*/}
-        <div className="flex overflow-x-hidden">
+        <div className="flex overflow-x-hidden rounded-2xl">
           {/* Animated ticker images */}
           <motion.div
             className="flex flex-shrink-0"
