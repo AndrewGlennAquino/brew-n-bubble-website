@@ -32,7 +32,7 @@ const FadeIn = ({ className, animate = false, children }) => {
       initial="initial"
       animate={animate ? "animateFadeIn" : null}
       whileInView={animate ? null : "animateFadeIn"}
-      viewport={{ amount: 0.5 }}
+      viewport={{ amount: 0.5, once: true }}
       variants={parentVariants}
     >
       {/* Encapsulate each child in a div that animates fade in */}
