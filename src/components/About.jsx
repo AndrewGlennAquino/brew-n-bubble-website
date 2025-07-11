@@ -28,7 +28,7 @@ const About = () => {
       {/* Animated container */}
       <FadeIn className="container flex flex-col sm:flex-row justify-center items-center gap-8">
         {/* About header */}
-        <div className="bg-snow/25 flex flex-col flex-grow-0 basis-full gap-8 rounded-2xl">
+        <div className="bg-snow/25 flex flex-col gap-8 rounded-2xl">
           <h1>About us</h1>
 
           {/* About text */}
