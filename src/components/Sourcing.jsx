@@ -1,11 +1,30 @@
 import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
-import FadeIn from "./FadeIn";
 import caribouImage from "../assets/images/caribou.png";
 
 /**
  * Sourcing component with animated header, text, and image
  */
 const Sourcing = () => {
+  // Animation variants for the parent container that staggers children
+  const parentVariants = {
+    animateFadeIn: {
+      transition: { delayChildren: 0.25, staggerChildren: 0.25 },
+    },
+  };
+
+  // Animation variants for the children to fade in
+  const childrenVariants = {
+    initial: { y: 25, opacity: 0 },
+    animateFadeIn: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
   // Animation variants that changes the background color when in view
   const sectionBackgroundVariants = {
     initial: {
@@ -31,10 +50,28 @@ const Sourcing = () => {
         variants={sectionBackgroundVariants}
       />
 
-      {/* Animated container */}
-      <FadeIn className="container flex flex-col-reverse sm:flex-row-reverse justify-center items-center gap-8">
+      {/* Container */}
+      <motion.div
+        className="container flex flex-col sm:flex-row justify-center items-center gap-8"
+        initial="initial"
+        whileInView="animateFadeIn"
+        viewport={{ amount: 0.5, once: true }}
+        variants={parentVariants}
+      >
+        {/* Sourcing image */}
+        <motion.div className="w-64 h-auto sm:pl-8" variants={childrenVariants}>
+          <img
+            src={caribouImage}
+            alt="Caribou logo"
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+
         {/* Sourcing header */}
-        <div className="text-snow sm:pr-8 flex flex-col gap-8">
+        <motion.div
+          className="text-snow sm:pr-8 flex flex-col gap-8"
+          variants={childrenVariants}
+        >
           <h1>Sourcing</h1>
 
           {/* Sourcing text */}
@@ -47,17 +84,8 @@ const Sourcing = () => {
             neque dolore modi. Magni possimus laudantium omnis odit quas, at
             facere quisquam fugit, dolor ullam commodi?
           </p>
-        </div>
-
-        {/* Sourcing image */}
-        <div className="w-64 h-auto sm:pl-8">
-          <img
-            src={caribouImage}
-            alt="Caribou logo"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </FadeIn>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
