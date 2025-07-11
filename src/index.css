@@ -71,7 +71,11 @@ body {
   }
 
   .image-ticker-item {
-    @apply w-full h-48 lg:h-64 mr-4 object-cover rounded-2xl;
+    @apply w-64 h-auto mr-8;
+  }
+
+  .image-ticker {
+    @apply flex-shrink-0 flex;
   }
 
   .social-media-link {
