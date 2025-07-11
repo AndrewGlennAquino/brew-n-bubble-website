@@ -7,7 +7,7 @@ import Button from "./Button.jsx";
  */
 const Hero = () => {
   return (
-    <section className="container h-screen mp-default" aria-label="Hero">
+    <section className="container h-screen mp-default my-0" aria-label="Hero">
       {/* Hero background video */}
       <video
         className="w-screen h-screen absolute inset-0 -z-10 object-cover"
