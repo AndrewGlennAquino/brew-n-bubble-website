@@ -41,25 +41,28 @@ const Sourcing = () => {
       className="mp-default flex justify-center items-center relative"
       aria-label="Sourcing"
     >
-      {/* Content Background */}
-      <motion.div
-        className="container absolute top-0 bottom-0 -z-10 rounded-4xl"
-        initial="initial"
-        whileInView="animateBackground"
-        viewport={{ amount: 0.5, once: true }}
-        variants={sectionBackgroundVariants}
-      />
-
       {/* Container */}
       <motion.div
-        className="container flex flex-col sm:flex-row justify-center items-center gap-8"
+        className="container flex flex-col sm:flex-row justify-center items-center relative"
         initial="initial"
         whileInView="animateFadeIn"
         viewport={{ amount: 0.5, once: true }}
         variants={parentVariants}
       >
+        {/* Content Background */}
+        <motion.div
+          className="container absolute top-0 bottom-0 -z-10 rounded-4xl"
+          initial="initial"
+          whileInView="animateBackground"
+          viewport={{ amount: 0.5, once: true }}
+          variants={sectionBackgroundVariants}
+        />
+
         {/* Sourcing image */}
-        <motion.div className="w-64 h-auto sm:pl-8 flex-shrink-0" variants={childrenVariants}>
+        <motion.div
+          className="w-64 h-auto m-4 flex-shrink-0"
+          variants={childrenVariants}
+        >
           <img
             src={caribouImage}
             alt="Caribou logo"
@@ -69,7 +72,7 @@ const Sourcing = () => {
 
         {/* Sourcing header */}
         <motion.div
-          className="text-snow sm:pr-8 flex flex-col gap-8"
+          className="text-snow m-4 flex flex-col gap-8"
           variants={childrenVariants}
         >
           <h1>Sourcing</h1>
