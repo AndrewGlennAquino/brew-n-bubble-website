@@ -1,19 +1,40 @@
+import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
 import FadeIn from "./FadeIn";
-import tempSourcingImage from "../assets/images/temp-sourcing-image.png";
+import caribouImage from "../assets/images/caribou.png";
 
 /**
  * Sourcing component with animated header, text, and image
  */
 const Sourcing = () => {
+  // Animation variants that changes the background color when in view
+  const sectionBackgroundVariants = {
+    initial: {
+      backgroundColor: "rgba(249, 245, 245, 0)",
+    },
+    animateBackground: {
+      backgroundColor: "rgba(122, 176, 189, 1)",
+      transition: { duration: 1 },
+    },
+  };
+
   return (
     <section
-      className="h-screen md:h-[65vh] mp-default flex justify-center items-center relative"
+      className="mp-default flex justify-center items-center relative"
       aria-label="Sourcing"
     >
+      {/* Content Background */}
+      <motion.div
+        className="container absolute top-0 bottom-0 -z-10 rounded-4xl"
+        initial="initial"
+        whileInView="animateBackground"
+        viewport={{ amount: 0.5, once: true }}
+        variants={sectionBackgroundVariants}
+      />
+
       {/* Animated container */}
-      <FadeIn className="container h-fit flex flex-col sm:flex-row-reverse justify-center items-center gap-8">
+      <FadeIn className="container flex flex-col-reverse sm:flex-row-reverse justify-center items-center gap-8">
         {/* Sourcing header */}
-        <div className="bg-snow/25 w-fit p-2 flex flex-col flex-grow-0 basis-full gap-8 rounded-2xl">
+        <div className="text-snow flex flex-col gap-8">
           <h1>Sourcing</h1>
 
           {/* Sourcing text */}
@@ -29,13 +50,11 @@ const Sourcing = () => {
         </div>
 
         {/* Sourcing image */}
-        <div className="w-fit sm:w-[40vw] 2xl:w-[30vw] h-fit sm:h-[40vh] 2xl:h-[30vh]">
-          <img
-            src={tempSourcingImage}
-            alt="Temporary sourcing image"
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
+        <img
+          src={caribouImage}
+          alt="Caribou logo"
+          className="w-full h-64 sm:h-full sm:pl-8 object-cover"
+        />
       </FadeIn>
     </section>
   );
