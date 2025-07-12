@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import ScrolledContext from "../contexts/ScrolledContext";
-import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
+import { motion, AnimatePresence } from "motion/react"; // eslint-disable-line no-unused-vars
 import Button from "./Button";
 
 /**
@@ -25,9 +25,11 @@ const Header = () => {
   const buttonVariants = {
     initial: {
       opacity: 0,
+      pointerEvents: "none",
     },
     animateButton: {
       opacity: 1,
+      pointerEvents: "auto",
     },
   };
 
@@ -43,15 +45,37 @@ const Header = () => {
       />
 
       {/* Content container */}
-      <div className="container mp-default my-0 flex justify-between items-center">
-        {/* Logo */}
-        <motion.h1
-          className={`text-butter ${scrolled ? `text-forest` : null}`}
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
-        >
-          Brew 'n Bubble
-        </motion.h1>
+      <div className="container mp-default my-0 flex justify-between items-center relative">
+        {/* Animate exit animations */}
+        <AnimatePresence>
+          {/* Hero logo */}
+          <motion.h1
+            key="hero-logo"
+            className={`text-butter`}
+            initial={{ opacity: 0, scale: 0 }}
+            animate={
+              scrolled
+                ? { opacity: 0, scale: 0, transition: { duration: 0.5 } }
+                : { opacity: 1, scale: 1, transition: { duration: 0.5 } }
+            }
+          >
+            Brew 'n Bubble
+          </motion.h1>
+
+          {/* Sticky logo */}
+          <motion.h1
+            key="sticky-logo"
+            className="text-forest absolute"
+            initial={{ opacity: 0 }}
+            animate={
+              scrolled
+                ? { opacity: 1, transition: { duration: 0.5 } }
+                : null
+            }
+          >
+            Brew 'n Bubble
+          </motion.h1>
+        </AnimatePresence>
 
         {/* Order now button */}
         <Button
