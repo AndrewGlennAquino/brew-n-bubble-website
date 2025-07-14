@@ -5,6 +5,7 @@ import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Sourcing from "./components/Sourcing.jsx";
+import Offers from "./components/Offers.jsx";
 import Reviews from "./components/Reviews.jsx";
 import Location from "./components/Location.jsx";
 import Footer from "./components/Footer.jsx";
@@ -46,6 +47,7 @@ const App = () => {
           <Hero />
           <About />
           <Sourcing />
+          <Offers />
           <Reviews />
           <Location />
         </main>
