@@ -56,11 +56,12 @@ const Sourcing = () => {
           />
         </motion.div>
 
-        {/* Sourcing header */}
+        {/* Sourcing text container */}
         <motion.div
           className="text-snow m-4 sm:p-8 flex flex-col gap-8"
           variants={childrenVariants}
         >
+          {/* Sourcing header */}
           <h1>Sourcing</h1>
 
           {/* Sourcing text */}
