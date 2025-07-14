@@ -1,5 +1,5 @@
 import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
-import tempBobaVideo from "../assets/videos/temp-boba-video.mp4";
+import tempBobaVideo from "../../public/videos/temp-boba-video.mp4";
 import Button from "./Button.jsx";
 
 /**
@@ -9,7 +9,7 @@ const Hero = () => {
   // Animation variants for the parent container that staggers children
   const parentVariants = {
     animateFadeIn: {
-      transition: { delayChildren: 0.25, staggerChildren: 0.25 },
+      transition: { staggerChildren: 0.25 },
     },
   };
 

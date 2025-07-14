@@ -1,7 +1,7 @@
 import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
-import facebook from "../assets/icons/facebook.png";
-import instagram from "../assets/icons/instagram.png";
-import tiktok from "../assets/icons/tiktok.png";
+import facebook from "../../public/icons/facebook.png";
+import instagram from "../../public/icons/instagram.png";
+import tiktok from "../../public/icons/tiktok.png";
 
 /**
  * Footer component that contains contact information and social media links

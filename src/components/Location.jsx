@@ -10,7 +10,7 @@ const Location = () => {
   // Animation variants for the container that staggers children
   const parentVariants = {
     animateFadeIn: {
-      transition: { delayChildren: 0.25, staggerChildren: 0.25 },
+      transition: { staggerChildren: 0.25 },
     },
   };
 
