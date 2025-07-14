@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
 import tempOffersImage from "../../public/images/temp-offers-image.jpg";
 
 /**
@@ -27,28 +27,28 @@ const Offers = () => {
 
   return (
     <section
-      className="mp-default flex flex-col sm:flex-row justify-center items-center relative"
+      className="mp-default flex justify-center items-center relative"
       aria-label="Our offers"
     >
       {/* Container */}
       <motion.div
-        className="container flex flex-col sm:flex-row justify-center items-center relative"
+        className="container flex flex-col sm:flex-row justify-center items-center gap-8 relative"
         initial="initial"
         whileInView="animateFadeIn"
         viewport={{ amount: 0.5, once: true }}
         variants={parentVariants}
       >
-        {/* Content background */}
-        <motion.div
-          className="container bg-forest absolute top-0 bottom-0 -z-10 rounded-4xl"
-          variants={childrenVariants}
-        />
-
         {/* Offers text container */}
         <motion.div
-          className="text-snow m-4 sm:p-8 flex flex-col gap-8"
+          className="text-snow p-4 lg:p-8 flex flex-col gap-8 relative"
           variants={childrenVariants}
         >
+          {/* Content background */}
+          <motion.div
+            className="container bg-forest absolute inset-0 -z-10 rounded-4xl"
+            variants={childrenVariants}
+          />
+
           {/* Offers header */}
           <h1>What We Offer</h1>
 
@@ -63,18 +63,15 @@ const Offers = () => {
             possimus magni similique architecto quaerat, sequi ex.
           </p>
         </motion.div>
-      </motion.div>
 
-      {/* Offers image */}
-      <motion.div
-        className="w-full h-auto m-4 sm:p-8"
-        variants={childrenVariants}
-      >
-        <img
-          src={tempOffersImage}
-          alt="Temporary What we offer image"
-          className="w-full h-full object-cover rounded-2xl"
-        />
+        {/* Offers image */}
+        <div className="shadow-2xl w-full sm:w-72 lg:w-96 flex-shrink-0 rounded-2xl">
+          <img
+            src={tempOffersImage}
+            alt="Temporary What we offer image"
+            className="w-full h-full object-contain rounded-2xl"
+          />
+        </div>
       </motion.div>
     </section>
   );
