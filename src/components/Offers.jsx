@@ -40,15 +40,9 @@ const Offers = () => {
       >
         {/* Offers text container */}
         <motion.div
-          className="text-snow p-4 lg:p-8 flex flex-col gap-8 relative"
+          className="bg-forest text-snow p-4 lg:p-8 flex flex-col gap-8 relative rounded-2xl"
           variants={childrenVariants}
         >
-          {/* Content background */}
-          <motion.div
-            className="container bg-forest absolute inset-0 -z-10 rounded-4xl"
-            variants={childrenVariants}
-          />
-
           {/* Offers header */}
           <h1>What We Offer</h1>
 
