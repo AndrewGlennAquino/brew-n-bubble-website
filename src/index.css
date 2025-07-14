@@ -63,6 +63,10 @@ body {
     text-shadow: 0 0 10px var(--color-butter);
   }
 
+  .card-shadow {
+    box-shadow: 0 0 10px var(--color-gray-300);
+  }
+
   .rounded-text-bg {
     @apply w-fit p-2 rounded-full;
   }
