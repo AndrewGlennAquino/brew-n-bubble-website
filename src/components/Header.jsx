@@ -13,10 +13,11 @@ const Header = () => {
   // Animation variants that changes the background color on scroll
   const headerBackgroundVariants = {
     initial: {
-      opacity: 0,
+      y: "-100%",
+      transition: { duration: 0.5, ease: "easeOut" },
     },
     animateBackground: {
-      opacity: 1,
+      y: 0,
       transition: { duration: 0.5, ease: "easeOut" },
     },
   };
@@ -24,11 +25,13 @@ const Header = () => {
   // Animation variants that changes the button style on scroll
   const buttonVariants = {
     initial: {
-      opacity: 0,
+      y: "-150%",
+      transition: { duration: 0.5, ease: "easeOut" },
       pointerEvents: "none",
     },
     animateButton: {
-      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
       pointerEvents: "auto",
     },
   };
@@ -38,7 +41,7 @@ const Header = () => {
     <header className={`fixed z-10 top-0 left-0 right-0`}>
       {/* Header background */}
       <motion.div
-        className={`bg-snow w-full h-19 fixed top-0 left-0 right-0 -z-10`}
+        className={`bg-snow shadow-lg w-full h-19 fixed top-0 left-0 right-0 -z-10`}
         initial="initial"
         animate={scrolled ? ["animateBackground", "animateText"] : null}
         variants={headerBackgroundVariants}
@@ -52,11 +55,11 @@ const Header = () => {
           <motion.h1
             key="hero-logo"
             className={`text-butter`}
-            initial={{ opacity: 0, scale: 0 }}
+            initial={{ opacity: 0 }}
             animate={
               scrolled
-                ? { opacity: 0, scale: 0, transition: { duration: 0.5 } }
-                : { opacity: 1, scale: 1, transition: { duration: 0.5 } }
+                ? { opacity: 0, transition: { duration: 0.5 } }
+                : { opacity: 1, transition: { duration: 0.5 } }
             }
           >
             Brew 'n Bubble
@@ -66,10 +69,13 @@ const Header = () => {
           <motion.h1
             key="sticky-logo"
             className="text-forest absolute"
-            initial={{ opacity: 0 }}
+            initial={{
+              y: "-150%",
+              transition: { duration: 0.5, ease: "easeOut" },
+            }}
             animate={
               scrolled
-                ? { opacity: 1, transition: { duration: 0.5 } }
+                ? { y: 0, transition: { duration: 0.5, ease: "easeOut" } }
                 : null
             }
           >
