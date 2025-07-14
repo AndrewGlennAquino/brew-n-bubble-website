@@ -38,7 +38,7 @@ const Sourcing = () => {
         viewport={{ amount: 0.5, once: true }}
         variants={parentVariants}
       >
-        {/* Content Background */}
+        {/* Content background */}
         <motion.div
           className="container bg-caribou absolute top-0 bottom-0 -z-10 rounded-4xl"
           variants={childrenVariants}
