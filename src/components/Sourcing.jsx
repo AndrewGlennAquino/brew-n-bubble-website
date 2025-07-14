@@ -1,5 +1,5 @@
 import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
-import caribouImage from "../../public/images/caribou.png";
+import caribouImage from "../assets/images/caribou.png";
 
 /**
  * Sourcing component with animated header, text, and image

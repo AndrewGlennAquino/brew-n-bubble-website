@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react"; // eslint-disable-line no-unused-vars
-import defaultUser from "../../public/images/user.png";
-import star from "../../public/images/star.png";
+import defaultUser from "../assets/images/user.png";
+import star from "../assets/images/star.png";
 
 /**
  * Review card component that takes a name, description, and animation props

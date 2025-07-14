@@ -1,5 +1,5 @@
 import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
-import tempOffersImage from "../../public/images/temp-offers-image.jpg";
+import tempOffersImage from "../assets/images/temp-offers-image.jpg";
 
 /**
  * Offers component with animated header, text, and image

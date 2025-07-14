@@ -1,5 +1,5 @@
 import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
-import tempBobaVideo from "../../public/videos/temp-boba-video.mp4";
+import tempBobaVideo from "../assets/videos/temp-boba-video.mp4";
 import Button from "./Button.jsx";
 
 /**

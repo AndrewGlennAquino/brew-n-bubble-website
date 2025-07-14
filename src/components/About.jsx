@@ -1,7 +1,7 @@
 import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
-import tempAboutImage1 from "../../public/images/temp-about-image-1.jpg";
-import tempAboutImage2 from "../../public/images/temp-about-image-2.jpg";
-import tempAboutImage3 from "../../public/images/temp-about-image-3.jpg";
+import tempAboutImage1 from "../assets/images/temp-about-image-1.jpg";
+import tempAboutImage2 from "../assets/images/temp-about-image-2.jpg";
+import tempAboutImage3 from "../assets/images/temp-about-image-3.jpg";
 
 /**
  * About component with animated header, text, and image
