@@ -65,7 +65,7 @@ const Offers = () => {
         </motion.div>
 
         {/* Offers image */}
-        <div className="shadow-2xl w-full sm:w-72 lg:w-96 flex-shrink-0 rounded-2xl">
+        <div className="w-full sm:w-72 lg:w-96 flex-shrink-0 rounded-2xl">
           <img
             src={tempOffersImage}
             alt="Temporary What we offer image"
