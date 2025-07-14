@@ -1,7 +1,7 @@
 import { motion } from "motion/react"; // eslint-disable-line no-unused-vars
-import tempAboutImage1 from "../assets/images/temp-about-image-1.jpg";
-import tempAboutImage2 from "../assets/images/temp-about-image-2.jpg";
-import tempAboutImage3 from "../assets/images/temp-about-image-3.jpg";
+import tempAboutImage1 from "../../public/images/temp-about-image-1.jpg";
+import tempAboutImage2 from "../../public/images/temp-about-image-2.jpg";
+import tempAboutImage3 from "../../public/images/temp-about-image-3.jpg";
 
 /**
  * About component with animated header, text, and image
@@ -13,7 +13,7 @@ const About = () => {
   // Animation variants for the parent container that staggers children
   const parentVariants = {
     animateFadeIn: {
-      transition: { delayChildren: 0.25, staggerChildren: 0.25 },
+      transition: { staggerChildren: 0.25 },
     },
   };
 
@@ -72,9 +72,8 @@ const About = () => {
         </motion.div>
 
         {/* About image ticker container */}
-        <motion.div
+        <div
           className="w-full flex overflow-x-hidden rounded-2xl"
-          variants={childrenVariants}
         >
           {/* Animated ticker images */}
           <motion.div
@@ -115,7 +114,7 @@ const About = () => {
               );
             })}
           </motion.div>
-        </motion.div>
+        </div>
       </motion.div>
     </section>
   );
