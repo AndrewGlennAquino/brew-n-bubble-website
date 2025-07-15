@@ -13,7 +13,7 @@ const Header = () => {
   // Animation variants that changes the background color on scroll
   const headerBackgroundVariants = {
     initial: {
-      y: "-100%",
+      y: "-101%",
       transition: { duration: 0.5, ease: "easeOut" },
     },
     animateBackground: {
