@@ -88,6 +88,7 @@ const About = () => {
                   <img
                     src={image}
                     alt={`${image}`}
+                    loading="lazy"
                     className="w-full h-full object-cover rounded-2xl"
                   />
                 </div>
@@ -108,6 +109,7 @@ const About = () => {
                   <img
                     src={image}
                     alt={`${image}`}
+                    loading="lazy"
                     className="w-full h-auto object-cover rounded-2xl"
                   />
                 </div>

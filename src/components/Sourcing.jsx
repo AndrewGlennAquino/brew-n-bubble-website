@@ -52,6 +52,7 @@ const Sourcing = () => {
           <img
             src={caribouImage}
             alt="Caribou logo"
+            loading="lazy"
             className="w-full h-full object-cover"
           />
         </motion.div>

@@ -27,17 +27,18 @@ const ReviewCard = ({
         <img
           src={defaultUser}
           alt="Default profile picture"
+          loading="lazy"
           className="w-full h-full object-cover"
         />
       </div>
 
       {/* Stars container */}
       <div className="flex gap-2">
-        <img src={star} alt="Star" className="star" />
-        <img src={star} alt="Star" className="star" />
-        <img src={star} alt="Star" className="star" />
-        <img src={star} alt="Star" className="star" />
-        <img src={star} alt="Star" className="star" />
+        <img src={star} alt="Star" loading="lazy" className="star" />
+        <img src={star} alt="Star" loading="lazy" className="star" />
+        <img src={star} alt="Star" loading="lazy" className="star" />
+        <img src={star} alt="Star" loading="lazy" className="star" />
+        <img src={star} alt="Star" loading="lazy" className="star" />
       </div>
 
       {/* Text container */}

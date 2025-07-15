@@ -63,6 +63,7 @@ const Offers = () => {
           <img
             src={tempOffersImage}
             alt="Temporary What we offer image"
+            loading="lazy"
             className="w-full h-full object-contain rounded-2xl"
           />
         </div>
