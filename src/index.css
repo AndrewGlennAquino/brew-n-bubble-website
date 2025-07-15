@@ -72,7 +72,7 @@ body {
   }
 
   .card-shadow {
-    box-shadow: 0 0 10px var(--color-gray-300);
+    box-shadow: 0 0 15px var(--color-gray-300);
     @apply rounded-2xl;
   }
 

@@ -40,7 +40,7 @@ const Sourcing = () => {
       >
         {/* Content background */}
         <motion.div
-          className="container bg-caribou absolute top-0 bottom-0 -z-10 rounded-4xl"
+          className="container bg-caribou card-shadow absolute top-0 bottom-0 -z-10 rounded-4xl"
           variants={childrenVariants}
         />
 

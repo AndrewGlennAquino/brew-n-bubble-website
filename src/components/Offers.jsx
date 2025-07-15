@@ -40,7 +40,7 @@ const Offers = () => {
       >
         {/* Offers text container */}
         <motion.div
-          className="bg-forest text-snow p-4 lg:p-8 flex flex-col gap-8 relative rounded-2xl"
+          className="bg-forest text-snow card-shadow p-4 lg:p-8 flex flex-col gap-8 relative rounded-2xl"
           variants={childrenVariants}
         >
           {/* Offers header */}
@@ -59,7 +59,7 @@ const Offers = () => {
         </motion.div>
 
         {/* Offers image */}
-        <div className="w-full sm:w-72 lg:w-96 flex-shrink-0 rounded-2xl">
+        <div className="card-shadow w-full sm:w-72 lg:w-96 flex-shrink-0 rounded-2xl">
           <img
             src={tempOffersImage}
             alt="Temporary What we offer image"

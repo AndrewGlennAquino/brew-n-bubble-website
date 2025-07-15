@@ -44,7 +44,7 @@ const Visit = () => {
             src={tempVisitImage}
             alt="Temporary come visit image"
             loading="lazy"
-            className="w-full h-full object-contain rounded-2xl"
+            className="card-shadow w-full h-full object-contain rounded-2xl"
           />
         </div>
 

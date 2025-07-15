@@ -55,7 +55,7 @@ const Location = () => {
           variants={childrenVariants}
         >
           <iframe
-            className="w-full h-full rounded-4xl"
+            className="card-shadow w-full h-full rounded-4xl"
             loading="lazy"
             allowFullScreen
             src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJh3GibEwbD4gRKCCmpnJvNGI&key=${mapsPublicKey}`}

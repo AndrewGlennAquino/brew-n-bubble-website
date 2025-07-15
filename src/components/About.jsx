@@ -54,7 +54,7 @@ const About = () => {
       >
         {/* About header */}
         <motion.div
-          className="bg-coffee text-snow w-full h-full p-4 lg:p-8 flex flex-col gap-8 rounded-2xl"
+          className="bg-coffee text-snow card-shadow w-full h-full p-4 lg:p-8 flex flex-col gap-8 rounded-2xl"
           variants={childrenVariants}
         >
           <h1>About us</h1>
