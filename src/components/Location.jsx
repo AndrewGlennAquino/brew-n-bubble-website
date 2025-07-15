@@ -55,6 +55,7 @@ const Location = () => {
           variants={childrenVariants}
         >
           <iframe
+            title="Google Maps location of Brew 'n Bubble"
             className="card-shadow w-full h-full rounded-4xl"
             loading="lazy"
             allowFullScreen
