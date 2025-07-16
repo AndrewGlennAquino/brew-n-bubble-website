@@ -40,7 +40,7 @@ const Offers = () => {
       >
         {/* Offers text container */}
         <motion.div
-          className="bg-forest text-snow card-shadow p-4 lg:p-8 flex flex-col gap-8 relative rounded-2xl"
+          className="bg-forest text-snow card-shadow p-4 lg:p-8 flex flex-col gap-4 relative rounded-2xl"
           variants={childrenVariants}
         >
           {/* Offers header */}
@@ -48,13 +48,15 @@ const Offers = () => {
 
           {/* Offers text */}
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-            quas cum exercitationem. Dolores possimus, tenetur quae aperiam sed,
-            ullam, nihil a odit nemo animi necessitatibus atque nostrum quo
-            error blanditiis! Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Accusantium nihil quod placeat voluptatem assumenda magni
-            consequuntur sint. Autem ratione, illo doloremque suscipit sapiente
-            possimus magni similique architecto quaerat, sequi ex.
+            We provide Caribou Coffee and the best bubble tea in town. We're a
+            one stop shop for the whole family with something for everyone.
+            <span>Quality, you can trust!</span>
+            Brew and Bubble is committed to providing only the best quality
+            drinks, food, and service, ensuring that your experience is nothing
+            less than perfect.
+            <span>Best bubble tea in town!</span>
+            Our products are made fresh daily with premium ingredients to ensure
+            that you get just the right amount of chewy tapioca.
           </p>
         </motion.div>
 

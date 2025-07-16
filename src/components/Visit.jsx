@@ -50,7 +50,7 @@ const Visit = () => {
 
         {/* Visit text container */}
         <motion.div
-          className="bg-snow text-night card-shadow p-4 lg:p-8 flex flex-col gap-8 relative rounded-2xl"
+          className="bg-snow text-night card-shadow p-4 lg:p-8 flex flex-col gap-4 relative rounded-2xl"
           variants={childrenVariants}
         >
           {/* Visit header */}
@@ -58,10 +58,9 @@ const Visit = () => {
 
           {/* Visit text */}
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto
-            incidunt perferendis, voluptatem esse error distinctio reprehenderit
-            necessitatibus vel atque ipsa dolor quas quisquam quos recusandae
-            cupiditate porro sint dolore maiores.
+            We're your go-to spot for the most mesmerizing bubble tea creations
+            and tantalizing flavors in town. Come visit us at 2415 Bowes Rd
+            Elgin IL (Walmart Plaza).
           </p>
 
           {/* Hours container */}

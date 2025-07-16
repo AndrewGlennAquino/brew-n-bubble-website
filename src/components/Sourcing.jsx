@@ -59,7 +59,7 @@ const Sourcing = () => {
 
         {/* Sourcing text container */}
         <motion.div
-          className="text-snow m-4 flex flex-col gap-8"
+          className="text-snow m-4 flex flex-col gap-4"
           variants={childrenVariants}
         >
           {/* Sourcing header */}
@@ -67,13 +67,12 @@ const Sourcing = () => {
 
           {/* Sourcing text */}
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
-            neque nam numquam id officia voluptate dolores, mollitia corporis
-            doloremque laudantium, corrupti veritatis similique. Pariatur unde
-            nam, repellendus debitis illum aut? Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Possimus aperiam sequi id officia ea
-            neque dolore modi. Magni possimus laudantium omnis odit quas, at
-            facere quisquam fugit, dolor ullam commodi?
+            There is nothing we love more than to discover new varieties of
+            coffee beans to join our collection. Through close relationships
+            with farmers, we carefully select the finest coffee varieties so
+            every cup in your hands is nothing short of perfect. Sourcing from
+            Caribou Coffee, we make a commitment to quality which is the heart
+            of everything we do.
           </p>
         </motion.div>
       </motion.div>
