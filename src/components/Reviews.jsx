@@ -16,7 +16,7 @@ const ReviewCard = ({
 }) => {
   return (
     <motion.div
-      className="bg-snow card-shadow w-full h-full p-4 sm:p-8 flex-shrink-0 flex flex-col justify-center items-center gap-4 rounded-4xl"
+      className="bg-snow card-shadow w-full h-fit p-4 sm:p-8 flex flex-col items-center gap-4 rounded-4xl"
       initial={initial}
       animate={animate}
       exit={exit}
@@ -57,34 +57,34 @@ const Reviews = () => {
   // Reviews array that holds review objects that contain name and description
   const reviews = [
     {
-      name: "Anonymous-1",
+      name: "Tomaskir",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto numquam excepturi nesciunt veritatis consectetur nemo perferendis laboriosam. Nisi, vero facere deserunt fugiat enim adipisci soluta minima dolores minus dolorum non?",
+        "Brew 'n Bubble is an absolute gem! The service here is impressively fast, ensuring you never have to wait long to enjoy their delicious offerings. Whether you're grabbing a quick coffee or indulging in one of their unique bubble teas, the staff is always prompt and efficient. The atmosphere is cozy, making it a great spot to relax or work while sipping on your favorite drink ... I highly recommend Brew 'n Bubble for anyone looking for a speedy yet delightful experience.",
     },
     {
-      name: "Anonymous-2",
+      name: "Ketan",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto numquam excepturi nesciunt veritatis consectetur nemo perferendis laboriosam. Nisi, vero facere deserunt fugiat enim adipisci soluta minima dolores minus dolorum non?",
+        "Extremely friendly service. This place has a lot of decorations and the ambiance is awesome for a bubble tea/smoothie/coffee joint. Ordered the Twisted Taro and Oreo Bubble teas with tapioca. Both were really good and kids enjoyed them ... Would definitely recommend this location for your bubble tea needs.",
     },
     {
-      name: "Anonymous-3",
+      name: "Tiff",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto numquam excepturi nesciunt veritatis consectetur nemo perferendis laboriosam. Nisi, vero facere deserunt fugiat enim adipisci soluta minima dolores minus dolorum non?",
+        "We really enjoyed our visit. Everything was clean inside, staff members were busy but so kind. Always attentive. We ordered one large mango bubble smoothie and one large passion fruit bubble smoothie. Both were delicious! We hung out: played cards while sipping on our drinks and enjoying the music.",
     },
     {
-      name: "Anonymous-4",
+      name: "Rae",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto numquam excepturi nesciunt veritatis consectetur nemo perferendis laboriosam. Nisi, vero facere deserunt fugiat enim adipisci soluta minima dolores minus dolorum non?",
+        "I stopped at Brew ‘n Bubble yesterday. It was my first time there and they were very friendly. I got a delicious taro milk tea and really appreciated that you can choose your sweetness level. I will be back. 😊",
     },
     {
-      name: "Anonymous-5",
+      name: "Nazia",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto numquam excepturi nesciunt veritatis consectetur nemo perferendis laboriosam. Nisi, vero facere deserunt fugiat enim adipisci soluta minima dolores minus dolorum non?",
+        "We were in Elgin for family gathering and ended up coming to this new business. Absolutely loved the ambiance and vibe. I ordered Mango bubble tea with Mango pop, it was delicious. People working behind the counter were friendly and recommended few other option to try.",
     },
     {
-      name: "Anonymous-6",
+      name: "Urawsum",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto numquam excepturi nesciunt veritatis consectetur nemo perferendis laboriosam. Nisi, vero facere deserunt fugiat enim adipisci soluta minima dolores minus dolorum non?",
+        "We went in today for the grand opening, as the schools were letting out. Everyone greeted us happily and all were clearly doing lots of work. I had the twisted taro with tapioca pearls and its was amazing!!!! they come in such cute cat cups too! My friend had the strawberry smoothie with strawberry popping boba and it was great too!! I got to try some hehe~☆",
     },
   ];
 
@@ -131,11 +131,11 @@ const Reviews = () => {
 
   return (
     <section
-      className="h-full mp-default flex justify-center items-center relative"
+      className="mp-default flex justify-center relative"
       aria-label="Reviews"
     >
       {/* Container */}
-      <div className="container flex flex-col gap-8 relative">
+      <div className="container flex flex-col gap-8">
         {/* Reviews header */}
         <motion.h1
           initial={{ y: 25, opacity: 0 }}
@@ -149,15 +149,14 @@ const Reviews = () => {
           Reviews
         </motion.h1>
 
-        {/* Review cards container for one card */}
-        <div className="flex justify-center items-center">
+        {/* Review cards container for review card */}
+        <div className="h-96 md:h-72 lg:h-64">
           <AnimatePresence mode="wait">
             {reviews.map(
-              (review, index) =>
+              (review) =>
                 activeCard === review.name && (
                   <ReviewCard
-                    key={`${review.name}-${index}`}
-                    name={review.name}
+                    key={`${review.name}`}
                     description={review.description}
                     initial="initial"
                     animate="animateFadeIn"
