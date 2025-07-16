@@ -43,27 +43,27 @@ const Hero = () => {
       <div className="bg-coffee/50 h-screen absolute inset-0 -z-10" />
 
       {/* Text container */}
-      <motion.div 
+      <motion.div
         className="text-butter w-full h-full flex flex-col justify-center gap-8"
         initial="initial"
-        animate="animateFadeIn"  
+        animate="animateFadeIn"
         variants={parentVariants}
       >
-        {/* Hero subtext */}
-        <motion.p 
-          className="font-pacifico text-2xl xl:text-3xl font-bold leading-none"
-          variants={childrenVariants}
-        >
-          Welcome to
-        </motion.p>
-
         {/* Hero header */}
-        <motion.h1 
+        <motion.h1
           className="font-pacifico text-glow text-5xl xl:text-6xl"
           variants={childrenVariants}
         >
           Brew 'n Bubble
         </motion.h1>
+
+        {/* Hero subtext */}
+        <motion.p
+          className="font-pacifico text-2xl xl:text-3xl leading-none"
+          variants={childrenVariants}
+        >
+          Satisfy Your Tastebuds
+        </motion.p>
 
         {/* View our menu button */}
         <Button
